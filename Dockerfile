@@ -19,7 +19,7 @@ RUN mkdir -p /bitlbee/state/configs
 
 RUN curl http://get.bitlbee.org/src/bitlbee-3.4.2.tar.gz > bitlbee-3.4.2.tar.gz
 RUN tar zxf bitlbee-3.4.2.tar.gz
-RUN cd bitlbee-3.4.2 && ./configure --ssl=openssl
+RUN cd bitlbee-3.4.2 && ./configure ./configure --ssl=openssl --purple=1 --otr=1 --twitter=1 --jabber=1
 RUN cd bitlbee-3.4.2 && make
 RUN cd bitlbee-3.4.2 && make install
 
